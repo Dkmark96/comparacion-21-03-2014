@@ -1,0 +1,53 @@
+/*-------------------------------------------------------
+Nombre:		Comparacion.cpp 
+Fecha:		21/3/2014
+Version:	V1
+Autor:		Marco Antonio Siñaniz Barea
+Comentario: Lee dos numeros enteros:
+			1) Si el primero es mayor calacula la suma de ambos.
+			2) Si el menor es par calcula el producto de ambos.
+			3) Si ambos son impares calcula la division del mayor con el menor.
+--------------------------------------------------------*/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+void main()
+{int A, B, Sum, Prod;
+ float Af, Div;
+printf("\n\n Ingrese dos numeros enteros:    ");
+scanf("%d%d",&A,&B);
+if(A>B)
+  {Sum=A+B;
+   printf("\n\n La SUMA de %d + %d = %d",A,B,Sum);
+   if(B % 2 ==0)
+   {Prod=A*B;
+    printf("\n\n El PRODUCTO de %d * %d = %d",A,B,Prod);
+   }
+   else
+   {if(A % 2 !=0)
+    {Af=A;
+	 Div=Af/B;
+     printf("\n\n El COCIENTE de %d / %d = %d",A,B,Div);
+    }
+    
+   } 
+  }
+else
+  {if(A % 2 ==0)
+   {Prod=A*B;
+    printf("\n\n El PRODUCTO de %d * %d = %d",A,B,Prod);
+   }
+   else
+   {if(A % 2 !=0)
+    {Af=A;
+	 Div=B/Af;
+     printf("\n\n El COCIENTE de %d / %d = %d",B,A,Div);
+    }
+   } 
+  }
+printf ("\n\n");
+system ("pause");	
+}
